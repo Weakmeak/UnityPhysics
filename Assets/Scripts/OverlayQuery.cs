@@ -31,11 +31,11 @@ public class OverlayQuery : MonoBehaviour
 		switch (queryType)
 		{
 			case QueryType.BOX:
-				// <overlay box>
+				colliders = Physics.OverlapBox(transform.position, Vector3.one * size, transform.rotation);
 				break;
 			case QueryType.SPHERE:
-				// <overlay sphere>
-				break;
+                colliders = Physics.OverlapSphere(transform.position, size/2);
+                break;
 			default:
 				break;
 		}
