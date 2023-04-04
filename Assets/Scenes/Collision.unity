@@ -515,6 +515,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &952434648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952434649}
+  m_Layer: 3
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &952434649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952434648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4460240551887542922}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639053682
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +974,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8584453040079959172}
+  - {fileID: 952434649}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -958,7 +990,7 @@ GameObject:
   - component: {fileID: 3233019269738109141}
   - component: {fileID: 7328377940337289711}
   - component: {fileID: 933550939556361784}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1183,7 +1215,7 @@ GameObject:
   - component: {fileID: 6721358334673665936}
   - component: {fileID: 2726527330117201261}
   - component: {fileID: 8362462784988333813}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ConrollerPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1205,7 +1237,14 @@ MonoBehaviour:
   speed: 3
   turnRate: 3
   jumpHeight: 3
+  doubleJumpHeight: 4
   hitForce: 2
+  fallRateMultiplier: 3
+  lowJumpRateMultiplier: 2
+  groundTransform: {fileID: 952434649}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!4 &8584453040079959172
 Transform:
   m_ObjectHideFlags: 0
