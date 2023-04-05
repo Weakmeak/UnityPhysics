@@ -9,6 +9,6 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) Instantiate(obj, transform.position, transform.rotation);
+        if(Input.GetKeyDown(KeyCode.Space)) Instantiate(obj, transform.position, Random.rotation);
     }
 }
